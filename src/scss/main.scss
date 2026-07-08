@@ -1,0 +1,13 @@
+@use "reset";
+@use "blocks/header";
+@use "blocks/hero";
+@use "blocks/technologies";
+@use "blocks/projects";
+@use "blocks/experience";
+@use "blocks/footer";
+
+body {
+    background-color: #161513;
+    color: #fff;
+	font-family: "Poppins", sans-serif;
+}

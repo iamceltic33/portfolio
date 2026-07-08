@@ -1,13 +1,201 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <title>Ruslan Abildin Portfolio</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="header__nav nav">
+      <div class="nav__logo">
+        <img src="/logo.png" alt="Logo" width="80" height="80" class="nav__logo-image">
+      </div>
+      <button class="nav__toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+      <ul class="nav__link-list" data-nav-menu>
+        <li class="nav__link-item"><a href="#home" class="nav__link">Home</a></li>
+        <li class="nav__link-item"><a href="#projects" class="nav__link">Projects</a></li>
+        <li class="nav__link-item"><a href="#experience" class="nav__link">Experience</a></li>
+        <li class="nav__link-item"><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero" id="home">
+    <div class="hero__image">
+      <img src="me.png" alt="Ruslan Abildin" class="hero__image-photo">
+    </div>
+    <div class="hero__title">
+      I like UX<br />and I like to <span class="hero__gradient">code!</span>
+    </div>
+    <p class="hero__info">
+      My name is Ruslan Abildin and I'm a frontend developer with a passion for creating beautiful and functional user
+      interfaces. I have experience in HTML, CSS, JavaScript, React, Next.js and worked with Express.js and Nest.js. I
+      enjoy collaborating with designers and other developers to bring ideas to life.
+    </p>
+    <div class="hero__buttons">
+      <a class="hero__button" href="#contacts">Get in Touch</a>
+      <a class="hero__button" href="#">Download CV</a>
+    </div>
+  </section>
+  <section class="technologies">
+    <h2 class="technologies__title">Technologies I Work With</h2>
+    <ul class="technologies__list">
+      <li class="technologies__item">
+        <img class="technologies__item-logo technologies__item-logo--react" title="React" alt="React logo"
+          src="tech-logos/react-svg.svg">
+      </li>
+      <li class="technologies__item">
+        <img class="technologies__item-logo technologies__item-logo--nextjs" title="Next.js" alt="Next.js logo"
+          src="tech-logos/next-dot-js-svg.svg">
+      </li>
+      <li class="technologies__item">
+        <img class="technologies__item-logo technologies__item-logo--typescript" title="TypeScript"
+          alt="TypeScript logo" src="tech-logos/typescript.svg">
+      </li>
+      <li class="technologies__item">
+        <img class="technologies__item-logo technologies__item-logo--expressjs" title="Express.js" alt="Express.js logo"
+          src="tech-logos/express-svg.svg">
+      </li>
+      <li class="technologies__item">
+        <img class="technologies__item-logo technologies__item-logo--nestjs" title="Nest.js" alt="Nest.js logo"
+          src="tech-logos/nestjs-svg.svg">
+      </li>
+    </ul>
+  </section>
+  <section class="projects">
+    <h2 class="projects__title"><span>Projects</span></h2>
+    <ul class="projects__list">
+      <li class="projects__item project-card">
+        <a class="project-card" href="https://invoice.wooppay.com">
+          <div class="project-card__preview-wrapper">
+            <video src="previews/invoice.mov" class="project-card__preview project-card__preview--video" autoplay loop
+              muted playsinline></video>
+          </div>
+          <div class="project-card__footer">
+            <p class="project-card__description">Main payment application of company</p>
+            <h3 class="project-card__title">Invoice App</h3>
+          </div>
+        </a>
+
+      </li>
+      <li class="projects__item project-card">
+        <a class="project-card" href="https://wooppay.group">
+          <div class="project-card__preview-wrapper">
+            <video src="previews/wooppay.group.mov" class="project-card__preview project-card__preview--video" autoplay
+              loop muted playsinline></video>
+          </div>
+          <div class="project-card__footer">
+            <p class="project-card__description">Company website and portal</p>
+            <h3 class="project-card__title">Wooppay Group</h3>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <section class="experience">
+    <h2 class="experience__title"><span>Experience</span></h2>
+    <ul class="experience__list">
+      <li class="experience__item xp-card">
+        <header class="xp-card__header">
+          <div class="xp-card__job-title">Frontend Team Lead at Wooppay</div>
+          <div class="xp-card__duration">Mar 2023 - Present</div>
+        </header>
+        <div class="xp-card__description">
+          Led a frontend team of three engineers, conducting 1:1 meetings, mentoring developers, and ensuring high code
+          quality and timely delivery. Established development standards and defined the technology stack for new
+          frontend projects. Collaborated with product managers, analysts, and stakeholders to estimate, prioritize, and
+          plan feature development.
+        </div>
+      </li>
+      <li class="experience__item xp-card">
+        <header class="xp-card__header">
+          <div class="xp-card__job-title">Frontend Developer at Wooppay</div>
+          <div class="xp-card__duration">Apr 2022 - Mar 2023</div>
+        </header>
+        <div class="xp-card__description">
+          Developed and maintained web applications using React, Next.js, and TypeScript. Collaborated with designers
+          and backend developers to create seamless user experiences. Participated in code reviews and contributed to
+          the improvement of development processes.
+        </div>
+      </li>
+      <li class="experience__item xp-card">
+        <header class="xp-card__header">
+          <div class="xp-card__job-title">Programming Instructor at ITStep Computer Academy</div>
+          <div class="xp-card__duration">Aug 2018 - Mar 2022</div>
+        </header>
+        <div class="xp-card__description">
+          Taught courses in web development and programming, including HTML, CSS, JavaScript, React, Vue, Angular,
+          Python, C#, and C++. Designed educational programs, conducted practical workshops, and supervised students
+          throughout their projects.
+        </div>
+      </li>
+      <li class="experience__item xp-card">
+        <header class="xp-card__header">
+          <div class="xp-card__job-title">Freelance Frontend Developer</div>
+          <div class="xp-card__duration">Aug 2018 - Dec 2019</div>
+        </header>
+        <div class="xp-card__description">
+          Built responsive websites based on Figma designs. Extended and maintained existing frontend applications.
+          Customized WordPress themes and integrated user interfaces.
+        </div>
+      </li>
+      <li class="experience__item xp-card">
+        <header class="xp-card__header">
+          <div class="xp-card__job-title">School Teacher at Petrovka Secondary School</div>
+          <div class="xp-card__duration">Sep 2012 - Aug 2018</div>
+        </header>
+        <div class="xp-card__description">
+          Taught computer science, programming, and robotics. Administered computer classrooms and maintained the
+          school's IT infrastructure.
+        </div>
+      </li>
+    </ul>
+  </section>
+  <footer class="footer contacts">
+    <div class="footer__content">
+      <h2 class="contacts__title">Contacts</h2>
+      <ul class="contacts__list">
+        <li class="contacts__item contacts__item--email">          
+          <a href="mailto:iamceltic9@gmail.com">
+            <img src="contacts/email.svg" alt="Email icon" class="contacts__item-icon">
+            iamceltic9@gmail.com</a>
+        </li>
+        <li class="contacts__item contacts__item--phone">
+          <a href="tel:+77066051256">
+            <img src="contacts/phone.svg" alt="Phone icon" class="contacts__item-icon">
+            +7 706 605 1256</a>
+        </li>
+        <li class="contacts__item contacts__item--linkedin">
+          <a href="https://www.linkedin.com/in/ruslan-abildin/">
+            <img src="contacts/linkedin.svg" alt="LinkedIn icon" class="contacts__item-icon">
+            LinkedIn</a>
+        </li>
+        <li class="contacts__item contacts__item--github">
+          <a href="https://github.com/iamceltic33">
+            <img src="contacts/github.svg" alt="GitHub icon" class="contacts__item-icon">
+            GitHub</a>
+        </li>
+        <li class="contacts__item contacts__item--telegram">
+          <a href="https://t.me/clover33">
+            <img src="contacts/telegram.svg" alt="Telegram icon" class="contacts__item-icon">
+            Telegram</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
 </html>

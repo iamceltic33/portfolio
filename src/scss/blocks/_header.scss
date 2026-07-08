@@ -1,0 +1,119 @@
+.header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: #222222;
+    padding-inline: 20px;
+    &__nav {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1080px;
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Plus Jakarta Sans", sans-serif;
+
+    &__toggle {
+        display: none;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        align-items: center;
+    }
+
+    &__toggle-line {
+        width: 24px;
+        height: 2px;
+        border-radius: 999px;
+        background-color: #fff;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    &__link-list {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__link-item {
+        display: flex;
+        align-items: stretch;
+        a {
+            display: block;
+            min-width: 160px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        padding-block: 12px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        gap: 16px;
+
+        &__logo-image {
+            width: 60px;
+            height: 60px;
+        }
+
+        &__toggle {
+            display: inline-flex;
+            margin-left: auto;
+        }
+
+        &__link-list {
+            width: 100%;
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: flex-start;
+            padding: 8px 0 4px;
+        }
+
+        &--open {
+            align-items: flex-start;
+
+            .nav__link-list {
+                display: flex;
+            }
+
+            .nav__toggle-line:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+
+            .nav__toggle-line:nth-child(2) {
+                opacity: 0;
+            }
+
+            .nav__toggle-line:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+        }
+
+        &__link-item a {
+            min-width: auto;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        &__link-list {
+            gap: 8px 12px;
+        }
+
+        &__link-item a {
+            padding: 4px 0;
+        }
+    }
+}

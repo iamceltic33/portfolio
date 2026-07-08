@@ -1,0 +1,112 @@
+.hero {
+    padding-top: 100px;
+    padding-bottom: 88px;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &__image {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 213px;
+        height: 213px;
+        margin-bottom: 41px;
+        &-photo {
+            width: 100%;
+            height: auto;
+            margin-top: -20px;
+        }
+    }
+    &__title {
+        font-weight: 900;
+        font-size: clamp(34px, 7vw, 55px);
+        line-height: 1.2;
+        max-width: 670px;
+        margin-bottom: 40px;
+        span {
+            background: linear-gradient(to right,#FF8660, #9A33FF);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    &__info {
+        color: #C5C5C5;
+        max-width: 670px;
+        margin-bottom: 40px;
+    }
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+    &__button {
+        width: 204px;
+        height: 64px;
+        line-height: 64px;
+        border: 1px solid #fff;
+        border-radius: 32px;
+        font-weight: 600;
+        font-size: 21px;
+        &:hover {
+            background: #fff;
+            color: #000;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 64px;
+        padding-bottom: 72px;
+
+        &__image {
+            width: 176px;
+            height: 176px;
+            margin-bottom: 28px;
+        }
+
+        &__title {
+            margin-bottom: 24px;
+        }
+
+        &__info {
+            font-size: 15px;
+            line-height: 1.65;
+            margin-bottom: 28px;
+        }
+
+        &__button {
+            width: min(100%, 320px);
+            font-size: 18px;
+            height: 56px;
+            line-height: 56px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 44px;
+        padding-bottom: 56px;
+
+        &__image {
+            width: 148px;
+            height: 148px;
+        }
+
+        &__title {
+            font-size: clamp(30px, 11vw, 40px);
+        }
+
+        &__buttons {
+            width: 100%;
+        }
+
+        &__button {
+            width: 100%;
+        }
+    }
+}
