@@ -61,7 +61,7 @@
         padding: 0 23px;
         position: relative;
         &::after {
-            content: url(../public/arrow.svg);
+            content: url("/arrow.svg");
             position: absolute;
             right: 20px;
             bottom: 0;
